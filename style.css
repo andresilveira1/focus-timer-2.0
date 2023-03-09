@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --text-color: #323238;
+  --text-color-dark-mode: #fff;
+
+  --input-range-bgcolor: #323238;
+  --input-circle-bgcolor: #323238;
+  --input-focus-range-bgcolor: #fff;
+  --input-focus-circle-bgcolor: #fff;
+
+  /* Light Mode */
+  --bg-light-mode: #fff;
+  --btn-climate-focus-bgcolor: #02799d;
+  --btn-climate-focus-imgcolor: #fff;
+
+  /* Dark Mode */
+  --bg-dark-mode: #121214;
+  --btn-controls-color: #c4c4cc;
+  --btn-climate-bgcolor: #29292e;
+  --btn-climate-imgcolor: #c4c4cc;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  height: 100vh;
+}
+
+.bg-dark {
+  background-color: var(--bg-dark-mode);
+  color: var(--text-color-dark-mode);
+}
+
+.bg-light {
+  background-color: var(--bg-light-mode);
+  color: var(--text-color);
+}
+
+.page-style {
+  display: flex;
+  justify-content: flex-end;
+  padding: 6rem 6rem 9.2rem 0;
+  height: 19.9rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 19.2rem;
+  margin-top: 10rem;
+}
+
+#timer {
+  font-size: 12.6rem;
+  display: flex;
+  line-height: 14.8rem;
+
+  margin-bottom: 1.7rem;
+}
+
+#controls {
+  display: flex;
+  gap: 4rem;
+}
+
+#climate {
+  display: grid;
+  grid-gap: 3.2rem;
+  grid-template-areas:
+    'A B'
+    'C D';
+}
+
+.buttonForest,
+.buttonRain,
+.buttonCoffeeshop,
+.buttonFireplace {
+  position: relative;
+}
+
+input {
+  position: absolute;
+  top: 11.8rem;
+  left: 2.8rem;
+  width: 9rem;
+  height: 0.4rem;
+  border-radius: 0.5rem;
+
+  -webkit-appearance: none;
+  background-color: var(--input-range-bgcolor);
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+
+  background-color: var(--input-circle-bgcolor);
+  cursor: pointer;
+}
+
+input::-moz-range-thumb {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+
+  background-color: var(--input-circle-bgcolor);
+  cursor: pointer;
+}
+
+input.focus,
+button input.button-climate-dark {
+  background-color: var(--input-focus-range-bgcolor);
+}
+
+.focus::-webkit-slider-thumb,
+.button-climate-dark::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+
+  cursor: pointer;
+  background-color: var(--input-focus-circle-bgcolor);
+}
+
+.button-climate-dark::-moz-range-thumb,
+.focus::-moz-range-thumb {
+  background-color: var(--input-focus-circle-bgcolor);
+}
+
+.button-controls-dark svg path {
+  fill: var(--btn-controls-color);
+}
+
+.button-climate-dark svg path:nth-child(1) {
+  fill: var(--btn-climate-bgcolor);
+}
+
+.button-climate-dark svg path:nth-child(2) {
+  fill: var(--btn-climate-imgcolor);
+}
+
+.focus svg path:nth-child(1) {
+  fill: var(--btn-climate-focus-bgcolor);
+}
+
+.focus svg path:nth-child(2) {
+  fill: var(--btn-climate-focus-imgcolor);
+}
+
+/* .button-focus-climate-dark svg path:nth-child(1) {
+  fill: #0a3442;
+}
+
+.button-focus-climate-dark svg path:nth-child(2) {
+  fill: white;
+} */
+
+@media (max-width: 935px) {
+  .wrapper {
+    display: grid;
+    gap: 5rem;
+    margin-top: 0;
+  }
+}
