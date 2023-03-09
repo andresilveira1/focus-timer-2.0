@@ -9,10 +9,8 @@
 
 <br>
 
-<div>
-  <img align="left" alt="Focus Timer 2.0" src=".github/preview-light.png" width="50%">
-  <img align="right" alt="Focus Timer 2.0" src=".github/preview-dark.png" width="50%">
-</div>
+<img align="left" alt="Focus Timer 2.0" src=".github/preview-light.png" width="50%">
+<img align="right" alt="Focus Timer 2.0" src=".github/preview-dark.png" width="50%">
 
 <br>
 
