@@ -1,7 +1,7 @@
 export default function Sound() {
   const bgForestAudio = new Audio('/sounds/forest.wav')
   const bgRainAudio = new Audio('/sounds/rain.wav')
-  const bgCoffeeshopAudio = new Audio('/sounds/coffeeshop.wav')
+  const bgCoffeeshopAudio = new Audio('/sounds/coffeeshop.mp3')
   const bgFireplaceAudio = new Audio('/sounds/fireplace.wav')
   const buttonPressAudio = new Audio('/sounds/button-press.wav')
   const kitchenTimer = new Audio('/sounds/kichen-timer.wav')
