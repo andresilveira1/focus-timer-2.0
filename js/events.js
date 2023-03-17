@@ -107,7 +107,7 @@ export default function Events({
     } else {
       controls.stopAudios()
       controls.removeFocusOnCards()
-      sound.bgCoffeeshopAudio.play()
+      sound.bgRainAudio.play()
       buttonCoffeeshop.classList.add('focus')
       inputVolumeCoffeeshop.classList.add('focus')
     }
