@@ -93,10 +93,7 @@ body {
     'C D';
 }
 
-.buttonForest,
-.buttonRain,
-.buttonCoffeeshop,
-.buttonFireplace {
+.card-sound {
   position: relative;
 }
 
@@ -133,7 +130,7 @@ input::-moz-range-thumb {
 }
 
 input.focus,
-button input.button-climate-dark {
+input.button-climate-dark {
   background-color: var(--input-focus-range-bgcolor);
 }
 

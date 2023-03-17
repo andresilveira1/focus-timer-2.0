@@ -37,7 +37,6 @@ export default function Controls({
     buttonDarkControls.classList.remove('button-controls-dark')
     buttonDarkClimate.classList.remove('button-climate-dark')
 
-    volumeFocusOff()
     volumeDarkMode()
   }
 
@@ -105,16 +104,23 @@ export default function Controls({
     sound.bgFireplaceAudio.pause()
   }
 
-  function volume() {
-    let forestVolume = inputVolumeForest.value
-    let rainVolume = inputVolumeRain.value
-    let coffeeshopVolume = inputVolumeCoffeeshop.value
-    let fireplaceVolume = inputVolumeFireplace.value
+  function volumeDefault() {
+    sound.bgForestAudio.volume = 0.5
+    sound.bgRainAudio.volume = 0.5
+    sound.bgCoffeeshopAudio.volume = 0.5
+    sound.bgFireplaceAudio.volume = 0.5
 
-    sound.bgForestAudio.volume = forestVolume
-    sound.bgRainAudio.volume = rainVolume
-    sound.bgCoffeeshopAudio.volume = coffeeshopVolume
-    sound.bgFireplaceAudio.volume = fireplaceVolume
+    inputVolumeForest.value = 0.5
+    inputVolumeRain.value = 0.5
+    inputVolumeCoffeeshop.value = 0.5
+    inputVolumeFireplace.value = 0.5
+  }
+
+  function volume() {
+    sound.bgForestAudio.volume = inputVolumeForest.value
+    sound.bgRainAudio.volume = inputVolumeRain.value
+    sound.bgCoffeeshopAudio.volume = inputVolumeCoffeeshop.value
+    sound.bgFireplaceAudio.volume = inputVolumeFireplace.value
   }
 
   return {
@@ -126,6 +132,7 @@ export default function Controls({
     stopAndReset,
     removeFocusOnCards,
     stopAudios,
+    volumeDefault,
     volume
   }
 }

@@ -72,14 +72,19 @@ export default function Events({
     if (cardSoundForestSelected) {
       controls.stopAudios()
       controls.removeFocusOnCards()
+      controls.volumeDefault()
     } else {
       controls.stopAudios()
       controls.removeFocusOnCards()
-      controls.volume()
+      controls.volumeDefault()
       sound.bgForestAudio.play()
       buttonForest.classList.add('focus')
       inputVolumeForest.classList.add('focus')
     }
+  })
+
+  inputVolumeForest.addEventListener('click', () => {
+    controls.volume()
   })
 
   buttonRain.addEventListener('click', function () {
@@ -88,13 +93,19 @@ export default function Events({
     if (cardSoundRainSelected) {
       controls.stopAudios()
       controls.removeFocusOnCards()
+      controls.volumeDefault()
     } else {
       controls.stopAudios()
       controls.removeFocusOnCards()
+      controls.volumeDefault()
       sound.bgRainAudio.play()
       buttonRain.classList.add('focus')
       inputVolumeRain.classList.add('focus')
     }
+  })
+
+  inputVolumeRain.addEventListener('click', () => {
+    controls.volume()
   })
 
   buttonCoffeeshop.addEventListener('click', function () {
@@ -104,13 +115,19 @@ export default function Events({
     if (cardSoundCoffeeshopSelected) {
       controls.stopAudios()
       controls.removeFocusOnCards()
+      controls.volumeDefault()
     } else {
       controls.stopAudios()
       controls.removeFocusOnCards()
+      controls.volumeDefault()
       sound.bgCoffeeshopAudio.play()
       buttonCoffeeshop.classList.add('focus')
       inputVolumeCoffeeshop.classList.add('focus')
     }
+  })
+
+  inputVolumeCoffeeshop.addEventListener('click', () => {
+    controls.volume()
   })
 
   buttonFireplace.addEventListener('click', function () {
@@ -120,12 +137,18 @@ export default function Events({
     if (cardSoundFireplaceSelected) {
       controls.stopAudios()
       controls.removeFocusOnCards()
+      controls.volumeDefault()
     } else {
       controls.stopAudios()
       controls.removeFocusOnCards()
+      controls.volumeDefault()
       sound.bgFireplaceAudio.play()
       buttonFireplace.classList.add('focus')
       inputVolumeFireplace.classList.add('focus')
     }
+  })
+
+  inputVolumeFireplace.addEventListener('click', () => {
+    controls.volume()
   })
 }
